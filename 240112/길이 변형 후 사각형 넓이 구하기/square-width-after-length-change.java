@@ -7,8 +7,8 @@ public class Main {
 
         int width = sc.nextInt(), height = sc.nextInt();
         
-        System.out.println(width+8);
-        System.out.println(height*3);
+        System.out.println(width+=8);
+        System.out.println(height*=3);
         System.out.println(width*height);
 
 
