@@ -6,6 +6,6 @@ public class Main {
         sc.useDelimiter(":");
 
         int a = sc.nextInt(), b = sc.nextInt();
-        System.out.println((a+1) + "\n" + b);
+        System.out.println((a+1) + ":" + b);
     }
 }
