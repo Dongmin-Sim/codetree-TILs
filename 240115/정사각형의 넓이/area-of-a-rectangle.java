@@ -8,8 +8,8 @@ public class Main {
         int area = (n*n);
 
         System.out.println(area);
-        
-        if(area < 5){
+
+        if(n < 5){
             System.out.println("tiny");
         }
     }
