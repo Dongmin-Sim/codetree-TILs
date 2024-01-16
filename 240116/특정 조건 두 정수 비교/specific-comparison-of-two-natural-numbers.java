@@ -8,15 +8,15 @@ public class Main {
         int a = sc.nextInt(), b = sc.nextInt();
 
         if (a < b) {
-            System.out.println(1);
+            System.out.print(1 + " ");
         } else {
-            System.out.println(0);
+            System.out.print(0 + " ");
         }
 
         if (a == b) {
-            System.out.println(1);
+            System.out.print(1);
         } else {
-            System.out.println(0);
+            System.out.print(0);
         }
     }
 }
