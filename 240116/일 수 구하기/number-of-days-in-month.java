@@ -11,10 +11,10 @@ public class Main {
         // 2 
         // 4, 6, 9, 11
         if (n < 8) {
-            if (n % 2 == 0) {
-                if (n == 2) {
-                    System.out.println(28);
-                }
+            if (n == 2) {
+                System.out.println(28);
+            }
+            else if (n % 2 == 0) {
                 System.out.println(30);
             } else {
                 System.out.println(31);
