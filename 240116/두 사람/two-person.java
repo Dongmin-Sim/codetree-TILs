@@ -11,7 +11,7 @@ public class Main {
         int ageB = sc.nextInt();
         char sexB = sc.next().charAt(0);
 
-        if ((ageA >= 19 && sexA == "M") || (ageB >= 19 && sexB == "M")) {
+        if ((ageA >= 19 && sexA == 'M') || (ageB >= 19 && sexB == 'M')) {
             System.out.println(1);
         } else {
             System.out.println(0);
