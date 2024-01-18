@@ -3,7 +3,7 @@ public class Main {
         // 여기에 코드를 작성해주세요.
 
         for(int i = 5; i < 18; i+=2) {
-            System.out.println(i + " ");
+            System.out.print(i + " ");
         }
     }
 }
