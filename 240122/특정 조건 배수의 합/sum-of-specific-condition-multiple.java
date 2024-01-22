@@ -6,6 +6,13 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt(), b = sc.nextInt();
         int sum = 0;
+
+        if (a > b){
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+
         for(int i=a; i<=b; i++) {
             if(i%5==0) {
                 sum += i;
