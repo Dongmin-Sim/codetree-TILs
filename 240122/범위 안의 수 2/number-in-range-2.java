@@ -13,6 +13,6 @@ public class Main {
             }
         }
 
-        System.out.printf("%d %.1f", sum, (double)sum / 10)
+        System.out.printf("%d %.1f", sum, (double)sum / 10);
     }
 }
