@@ -8,7 +8,7 @@ public class Main {
         int i = 1;
         while(true) {
             n/=i;
-            if(n < 1)
+            if(n <= 1)
                 break;
 
             i++;
