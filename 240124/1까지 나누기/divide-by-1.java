@@ -8,11 +8,11 @@ public class Main {
         int i = 1;
         while(true) {
             n/=i;
-            if(n < i)
+            if(n < 1)
                 break;
 
             i++;
         }
-        System.out.print(i+1);
+        System.out.print(i);
     }
 }
