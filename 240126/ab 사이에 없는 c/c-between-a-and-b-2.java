@@ -8,16 +8,16 @@ public class Main {
         int a = sc.nextInt(),b = sc.nextInt(), c = sc.nextInt();
         boolean flag = false;
         for(int i = a; i<= b; i++) {
-            if(i%c!= 0 && i%c!=0 )
+            if(i%c== 0)
             {
                 flag = true;
             }
         }
 
         if(flag) {
-            System.out.println("YES");
-        }else {
             System.out.println("NO");
+        }else {
+            System.out.println("YES");
         }
 
 
