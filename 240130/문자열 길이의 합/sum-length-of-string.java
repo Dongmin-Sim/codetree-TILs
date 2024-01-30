@@ -9,7 +9,7 @@ public class Main {
         int stringLength = 0;
         int startAcnt = 0;
 
-        for(int i = 0; i< 3; i++) {
+        for(int i = 0; i< n; i++) {
             String s = sc.next();
             stringLength += s.length();
             if(s.charAt(0) == 'a') {
