@@ -13,7 +13,7 @@ public class Main {
     public static void printGcd(int n, int m) {
         int gcd = 0;
 
-        for(int i = 1; i < n; i++) {
+        for(int i = 1; i <= n; i++) {
             if(n%i == 0 && m%i == 0){
                 if(i > gcd) {
                     gcd = i;
