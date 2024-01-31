@@ -16,15 +16,16 @@ public class Main {
                 gcd = i;
             }
         }
-        int j = 1;
+
+        int j = 1, lcd = gcd;
         while(true) {
             
-            if(gcd % n == 0 && gcd % m ==0) {
-                System.out.print(gcd);
+            if(lcd % n == 0 && lcd % m ==0) {
+                System.out.print(lcd);
                 break;
             }
             j++;
-            gcd*=j;
+            lcd = gcd * j;
         }
     }
 }
