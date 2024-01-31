@@ -3,17 +3,16 @@ import java.util.Scanner;
 public class Main {
 
     public static boolean contain369(int i) {
-        int q = i, r = 0;
+        int q = i;
         while (true) {
-            int temp = q / 10;
+            int temp = q % 10;
             if(temp == 3 | temp == 6 | temp == 9) {
                 return true;
             }
 
-            r = q % 10;
-            q = r * 10;
+            q = q / 10;
             
-            if(r == 0) {
+            if(q == 0) {
                 return false;
             }
         }
