@@ -17,15 +17,6 @@ public class Main {
             }
         }
 
-        int j = 1, lcd = gcd;
-        while(true) {
-            
-            if(lcd % n == 0 && lcd % m ==0) {
-                System.out.print(lcd);
-                break;
-            }
-            j++;
-            lcd = gcd * j;
-        }
+        System.out.print(n*m/gcd);
     }
 }
