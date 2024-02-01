@@ -11,7 +11,6 @@ public class Main {
         }
 
         return arr2pt == arr2.length;
-
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
