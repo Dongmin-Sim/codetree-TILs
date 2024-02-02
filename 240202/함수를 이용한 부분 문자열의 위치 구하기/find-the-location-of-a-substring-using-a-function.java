@@ -23,6 +23,7 @@ public class Main {
             }
             // System.out.println("st idx" + i + " : " + startIdx + " " + subIdx);
         }
+        startIdx = subIdx >= sub.length() ? startIdx:-1;
     }
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
