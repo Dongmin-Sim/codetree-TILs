@@ -21,7 +21,7 @@ public class Main {
                 startIdx = -1;
                 subIdx = 0;
             }
-            System.out.println("st idx" + i + " : " + startIdx + " " + subIdx);
+            // System.out.println("st idx" + i + " : " + startIdx + " " + subIdx);
         }
     }
     public static void main(String[] args) {
