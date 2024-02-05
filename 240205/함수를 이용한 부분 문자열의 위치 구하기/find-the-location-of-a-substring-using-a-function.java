@@ -1,43 +1,41 @@
 import java.util.Scanner;
-public class Main {
 
-    public static int leastIndex = -1;
+public class Main {
+    public static String text, pattern;
+
+    public static boolean isSubStr(int startIdx){
+        int n = text.length();
+        int m = pattern.length();
+
+        if (startIdx + m - 1 >= n) {
+            return false;
+        }
+
+        for(int i = 0; i < m; i++) {
+            if(text.charAt(startIdx + i) != pattern.charAt(i)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static int findIndex() {
+        int n = text.length();
+        for(int i = 0; i<n; i++) {
+            if (isSubStr(i)) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
-        String word = sc.next(), sub = sc.next();
+        text = sc.next(); pattern = sc.next();
+
         
-        subString(word, sub);
-        System.out.print(leastIndex);
-    }
-
-    public static void subString(String word, String sub) {
-        int wordPtr = 0;
-        int subPtr = 0;
-
-        while (true) {
-            if (wordPtr == word.length() || subPtr == sub.length()) {
-                if (sub.length() - subPtr > 0) {
-                    leastIndex = -1;
-                }
-                break;
-            }
-
-            if (subPtr == 0 && word.charAt(wordPtr) == sub.charAt(subPtr)) {
-                leastIndex = wordPtr;
-            }
-
-            if (word.charAt(wordPtr) == sub.charAt(subPtr)) {
-                subPtr++;
-            } else {
-                if (word.charAt(wordPtr) == sub.charAt(0)) {
-                    leastIndex = wordPtr;
-                } else {
-                    subPtr = 0;
-                }
-            }
-
-            wordPtr++;
-        }
+        System.out.print(findIndex());
     }
 }
