@@ -17,6 +17,9 @@ public class Main {
 
         while (true) {
             if (wordPtr == word.length() || subPtr == sub.length()) {
+                if (sub.length() - subPtr > 0) {
+                    leastIndex = -1;
+                }
                 break;
             }
 
