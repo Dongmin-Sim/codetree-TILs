@@ -16,7 +16,7 @@ public class Main {
         int subPtr = 0;
 
         while (true) {
-            if (wordPtr == word.length()) {
+            if (wordPtr == word.length() || subPtr == sub.length()) {
                 break;
             }
 
@@ -27,7 +27,11 @@ public class Main {
             if (word.charAt(wordPtr) == sub.charAt(subPtr)) {
                 subPtr++;
             } else {
-                subPtr = 0;
+                if (word.charAt(wordPtr) == sub.charAt(0)) {
+                    leastIndex = wordPtr;
+                } else {
+                    subPtr = 0;
+                }
             }
 
             wordPtr++;
