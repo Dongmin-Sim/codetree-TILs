@@ -16,7 +16,7 @@ public class Main {
     }
     public static int recursiveMax(int idx) {
         // if n == 0 return arr[n];
-        if (idx == 0) return arr[idx];
+        if (idx == 0) return arr[0];
 
 
         int temp = recursiveMax(idx-1);
