@@ -12,24 +12,33 @@ public class Main {
         String t = sc.next();
 
         arr = new String[n];
-        newArr = new String[n];
-
+        
+        // 1. 문자열 t로 시작하는가?
+        int cnt = 0;
         for(int i = 0; i<n; i++) {
-            arr[i] = sc.next();
+            String temp = sc.nextLine();
+
+            if(startAtT(temp, t)) {
+                cnt++;
+                arr[i] = temp;
+            } else {
+                arr[i] = null;
+            }
+            
         }
 
-        Arrays.sort(arr);
-
-        // 1. 문자열 t로 시작하는가?
         // 2. 1에 해당하는 문자열 중 정렬했을때 k번째 문자열은 무엇?
+        newArr = new String[cnt];
 
+        int idx = 0;
         for(int i = 0; i < n; i++) {
-            if(startAtT(arr[i], t)) {
-                newArr[i] = arr[i];
+            if (arr[i] != null) {
+                newArr[idx] = arr[i];
+                idx++;
             }
         }
-
-        System.out.print(newArr[k]);
+        Arrays.sort(newArr);
+        System.out.print(newArr[k-1]);
     }
 
     public static boolean startAtT(String word, String t) {
