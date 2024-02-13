@@ -38,6 +38,9 @@ public class Main {
             }
         }
         Arrays.sort(newArr);
+        for(int i = 0; i < newArr.length; i++) {
+            System.out.println(newArr[i]);
+        }
         System.out.print(newArr[k-1]);
     }
 
@@ -54,7 +57,6 @@ public class Main {
                 return false;
             }
         }
-
         return true;
     }
 }
