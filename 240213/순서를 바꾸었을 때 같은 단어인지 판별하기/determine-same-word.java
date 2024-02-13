@@ -16,6 +16,9 @@ public class Main {
     }
 
     public static boolean isSame(String a, String b) {
+        if(a.length() != b.length()) {
+            return false;
+        }
         char[] aChar = a.toCharArray();
         char[] bChar = b.toCharArray();
 
