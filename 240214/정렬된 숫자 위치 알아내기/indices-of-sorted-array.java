@@ -32,9 +32,9 @@ public class Main {
         Arrays.sort(numbers);
 
         int[] rank = new int[n];
-        // 3(1) 1(2) 6(3) 2(4) 7(5) 30(6) 1(7)
+        // 3(0) 1(1) 6(2) 2(3) 7(4) 30(5) 1(6)
         // 1(1) 1(6) 2(3) 3(0) 6(2) 7(4) 30(5)
-
+        // 3(0):4 1(1):1 .. 
         for (int i = 0; i < n; i++) {
             rank[numbers[i].id] = i+1;
         }
