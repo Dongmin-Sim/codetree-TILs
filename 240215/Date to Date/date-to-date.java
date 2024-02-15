@@ -9,9 +9,9 @@ public class Main {
         int m1 = sc.nextInt(), d1 = sc.nextInt();
         int m2 = sc.nextInt(), d2 = sc.nextInt();
 
-        int result = (getDays(m2) + d2) - (getDays(m1) + d1);
+        int result = (getDays(m2) + d2) - (getDays(m1) + d1) + 1;
 
-        System.out.println(result + 1);
+        System.out.println(result);
     }
     public static int getDays(int month) {
         int days = 1;
