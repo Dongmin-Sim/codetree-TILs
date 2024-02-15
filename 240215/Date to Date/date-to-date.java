@@ -11,13 +11,17 @@ public class Main {
 
         int result = (getDays(m2) + d2) - (getDays(m1) + d1);
 
-        System.out.println(result == 0 ? 1 :result);
+        System.out.println(result + 1);
     }
     public static int getDays(int month) {
-        int days = 0;
+        int days = 1;
         for (int i = 1; i <= month; i++) {
             days += monthDays[i-1];
         }
         return days;
     }
+    // 59
+    // 104 
+    // 104 - 59
+    // 
 }
