@@ -9,12 +9,12 @@ public class Main {
         int[][] matrixA = new int[n][m];
 
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
+            for (int j = 0; j < m; j++) {
                 matrixA[i][j] = sc.nextInt();
             }
         }
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
+            for (int j = 0; j < m; j++) {
                 if (matrixA[i][j] == sc.nextInt()) {
                     System.out.print(0 + " ");
                 } else {
