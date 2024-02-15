@@ -7,7 +7,6 @@ public class Main {
         int n = sc.nextInt(), m = sc.nextInt();
 
         int[][] matrixA = new int[n][m];
-        int[][] matrixB = new int[n][m];
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -16,13 +15,7 @@ public class Main {
         }
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                matrixB[i][j] = sc.nextInt();
-            }
-        }
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (matrixA[i][j] == matrixB[i][j]) {
+                if (matrixA[i][j] == sc.nextInt()) {
                     System.out.print(0 + " ");
                 } else {
                     System.out.print(1 + " ");
