@@ -11,7 +11,7 @@ public class Main {
 
         int result = (getDays(m2) + d2) - (getDays(m1) + d1);
 
-        System.out.println(result);
+        System.out.println(result == 0 ? 1 :result);
     }
     public static int getDays(int month) {
         int days = 0;
