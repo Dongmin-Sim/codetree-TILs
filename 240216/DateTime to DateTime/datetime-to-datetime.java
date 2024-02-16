@@ -8,10 +8,10 @@ public class Main {
         // 11 11:11 ~ a b:c
 
         int temp = changeToMinute(a, b, c) - changeToMinute(11, 11, 11);
-        if (temp > 0) {
-            System.out.println(temp);
-        } else {
+        if (temp < 0) {
             System.out.println(-1);
+        } else{
+            System.out.println(temp);
         }
 
     }
