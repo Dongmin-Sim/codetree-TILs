@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
     public static int MIN = 100;
     public static int OFFSET = 100;
-    public static int[] arr = new int[MIN + OFFSET + 1];
+    public static int[] arr = new int[MIN + OFFSET + 2];
     public static int cur = OFFSET;
 
     public static void main(String[] args) {
