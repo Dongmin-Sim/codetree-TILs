@@ -13,7 +13,10 @@ public class Main {
             scores[i] = sc.nextDouble();
         }
 
-        double sum = Arrays.stream(scores).sum();
+        double sum = 0;
+        for (int i = 0; i < n; i++) {
+            sum += scores[i];
+        }
         System.out.printf("%.1f", sum/n);
     }
 
