@@ -8,7 +8,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt(), k = sc.nextInt();
 
-        blockArr = new int[n];
+        blockArr = new int[n+1];
 
         for (int i = 0; i < k; i++) {
             upBlock(sc.nextInt(), sc.nextInt());
