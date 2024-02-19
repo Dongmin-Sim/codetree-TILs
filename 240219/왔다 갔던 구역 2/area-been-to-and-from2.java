@@ -33,14 +33,14 @@ public class Main {
     }
 
     public static void goRight(int step) {
-        for (int i = cur; i <= cur+step-1; i++) {
+        for (int i = cur; i < cur+step; i++) {
             arr[i]++;
         }
         cur += step;
     }
 
     public static void goLeft(int step) {
-        for (int i = cur; i >= cur-step+1; i--) {
+        for (int i = cur; i > cur-step; i--) {
             arr[i]++;
         }
         cur -= step;
