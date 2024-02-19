@@ -16,12 +16,12 @@ public class Main {
         for (int i = 0; i < n; i++) {
             sum += scores[i];
         }
-
-        System.out.printf("%.1f\n", sum/n);
-
-        if (sum >= 4.0) {
+        double avg = sum/n;
+        System.out.printf("%.1f\n", avg);
+        
+        if (avg >= 4.0) {
             System.out.print("Perfect");
-        } else if (sum >= 3.0) {
+        } else if (avg >= 3.0) {
             System.out.print("Good");
         } else {
             System.out.print("Poor");
