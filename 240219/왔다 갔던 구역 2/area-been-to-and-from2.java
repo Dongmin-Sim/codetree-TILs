@@ -23,22 +23,26 @@ public class Main {
             }
         }
 
-        int max = -1;
+        int max = 0;
         for (int i = 0; i < arr.length; i++) {
-            max = Math.max(max, arr[i]);
+            if (arr[i] >= 2) {
+                max++;
+            }
         }
         System.out.println(max);
     }
 
     public static void goRight(int step) {
         for (int i = 0; i <= step; i++) {
-            arr[cur + i]++;
+            cur++;
+            arr[cur]++;
         }
     }
 
     public static void goLeft(int step) {
         for (int i = 0; i <= step; i++) {
-            arr[cur - i]++;
+            cur--;
+            arr[cur]++;
         }
     }
 }
