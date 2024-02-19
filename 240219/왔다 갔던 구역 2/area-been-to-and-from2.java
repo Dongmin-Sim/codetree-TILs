@@ -13,7 +13,7 @@ public class Main {
         int n = sc.nextInt();
 
         for (int i = 0; i < n; i++) {
-            int step = sc.nextInt() - 1;
+            int step = sc.nextInt();
             String direction = sc.next();
 
             if (direction.equals("R")) {
@@ -33,16 +33,18 @@ public class Main {
     }
 
     public static void goRight(int step) {
-        for (int i = 0; i <= step; i++) {
-            arr[cur]++;
-            cur++;
+        for (int i = cur; i <= cur+step-1; i++) {
+            arr[i]++;
         }
+        cur += step;
     }
 
     public static void goLeft(int step) {
-        for (int i = 0; i <= step; i++) {
-            arr[cur]++;
-            cur--;
+        for (int i = cur; i >= cur-step+1; i--) {
+            arr[i]++;
         }
+        cur -= step;
     }
+
+
 }
