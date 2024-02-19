@@ -17,7 +17,7 @@ public class Main {
             sum += scores[i];
         }
 
-        System.out.printf("%.1f ", sum/n);
+        System.out.printf("%.1f\n", sum/n);
 
         if (sum >= 4.0) {
             System.out.print("Perfect");
