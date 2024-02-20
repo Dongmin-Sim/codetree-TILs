@@ -23,15 +23,13 @@ public class Main {
         for (int i = 0; i < n; i++) {
             for (int j = x[i]; j < x[i] + LENGTH; j++) {
                 for (int k = y[i]; k < y[i] + LENGTH; k++) {
-                    if (matrix[j][k] != 1) {
-                        matrix[j][k] = 1;
-                    }
+                    matrix[j][k] = 1;
                 }
             }
         }
         int cnt = 0;
-        for (int i = 0; i < MAX; i++) {
-            for (int j = 0; j < MAX; j++) {
+        for (int i = 0; i <= MAX; i++) {
+            for (int j = 0; j <= MAX; j++) {
                 cnt += matrix[i][j];
             }
         }
