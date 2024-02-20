@@ -20,8 +20,8 @@ public class Main {
         // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        Rectangle r1 = new Rectangle(sc.nextInt(), sc.nextInt(), sc.nextInt(), sc.nextInt());
-        Rectangle r2 = new Rectangle(sc.nextInt(), sc.nextInt(), sc.nextInt(), sc.nextInt());
+        Rectangle r1 = new Rectangle(sc.nextInt()+OFFSET, sc.nextInt()+OFFSET, sc.nextInt()+OFFSET, sc.nextInt()+OFFSET);
+        Rectangle r2 = new Rectangle(sc.nextInt()+OFFSET, sc.nextInt()+OFFSET, sc.nextInt()+OFFSET, sc.nextInt()+OFFSET);
 
         for (int i = r1.x1; i < r1.x2; i++) {
             for (int j = r1.y1; j < r1.y2; j++) {
