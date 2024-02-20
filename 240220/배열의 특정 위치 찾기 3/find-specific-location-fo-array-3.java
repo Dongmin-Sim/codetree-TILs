@@ -14,6 +14,7 @@ public class Main {
                 arr[i] = num;
             } else {
                 result = arr[i-1] + arr[i-2] + arr[i-3];
+                break;
             }
         }
         System.out.println(result);
