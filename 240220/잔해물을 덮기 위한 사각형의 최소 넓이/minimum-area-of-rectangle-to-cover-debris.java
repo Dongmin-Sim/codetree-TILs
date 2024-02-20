@@ -32,6 +32,7 @@ public class Main {
             }
         }
 
+        int cnt = 0;
         int minX=MAX, maxX = 0;
         int minY=MAX, maxY = 0;
         for (int i = 0; i <= MAX; i++) {
@@ -42,9 +43,15 @@ public class Main {
 
                     minY = Math.min(minY, j);
                     maxY = Math.max(maxY, j);
+                    cnt++;
                 }
             }
         }
-        System.out.println((maxX - minX + 1) * (maxY - minY + 1));
+        if (cnt == 0) {
+            System.out.prinln(0);
+        }else {
+            System.out.println((maxX - minX + 1) * (maxY - minY + 1));
+        }
+        
     }
 }
