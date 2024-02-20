@@ -48,10 +48,10 @@ public class Main {
             }
         }
         if (cnt == 0) {
-            System.out.prinln(0);
+            System.out.println(0);
         }else {
             System.out.println((maxX - minX + 1) * (maxY - minY + 1));
         }
-        
+
     }
 }
