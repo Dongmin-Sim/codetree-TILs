@@ -15,7 +15,7 @@ public class Main {
         int result = 0;
         int cnt = 0;
         for (int i = 0; i < n; i++) {
-            if (i == 0 || arr[i] <= arr[i - 1] || arr[i] <= 3) {
+            if (i == 0 || arr[i] <= 3) {
                 cnt = 0;
             } else {
                 cnt++;
