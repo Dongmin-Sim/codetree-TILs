@@ -21,7 +21,7 @@ public class Main {
         }
 
         for (int i = 0; i < idx; i++) {
-            System.out.print(even[i]);
+            System.out.print(even[i] + " ");
         }
     }
 }
