@@ -16,12 +16,12 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             if (i == 0 || arr[i] != arr[i - 1]) { // 바뀌는 조건
                 // TODO 이전 동일한 횟수 중 최댓값 갱신
-                result = Math.max(result, cnt);
                 cnt = 1;
             } else {
                 // TODO 이전 동일한 횟수 계산
                 cnt++;
             }
+            result = Math.max(result, cnt);
         }
 
         System.out.println(result);
