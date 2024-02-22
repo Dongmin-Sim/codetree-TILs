@@ -8,20 +8,19 @@ public class Main {
     public static void main(String[] args) {
         int n = sc.nextInt(), m = sc.nextInt();
 
-
-        // TODO simulation Time table
-        makeTimeTable(n, 'A');
+        int retTime = makeTimeTable(n, 'A');
         makeTimeTable(m, 'B');
 
-        for (int i = 0; i < MAXT; i++) {
+        for (int i = 0; i < retTime; i++) {
             if (timeTableA[i] == timeTableB[i]) {
                 System.out.println(i+1);
-                break;
+                return;
             }
         }
+        System.out.println(-1);
     }
 
-    public static void makeTimeTable(int n, char type) {
+    public static int makeTimeTable(int n, char type) {
         int curPosition = 0, curTime = 0;
         int[] table = type == 'A' ? timeTableA : timeTableB;
 
@@ -39,5 +38,6 @@ public class Main {
             }
         }
 
+        return curTime;
     }
 }
