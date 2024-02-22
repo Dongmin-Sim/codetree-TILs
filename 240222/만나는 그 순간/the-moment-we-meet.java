@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Main {
     public static int MAXT = 1000;
-    public static int[] timeTableA = new int[MAXT];
-    public static int[] timeTableB = new int[MAXT];
+    public static int[] timeTableA = new int[MAXT+1];
+    public static int[] timeTableB = new int[MAXT+1];
     public static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         int n = sc.nextInt(), m = sc.nextInt();
