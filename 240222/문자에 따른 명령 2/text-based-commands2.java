@@ -10,7 +10,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String instruction = sc.next();
         int nx = 0, ny = 0;
-        
+
         for (int i = 0; i < instruction.length(); i++) {
             char dir = instruction.charAt(i);
 
@@ -18,10 +18,10 @@ public class Main {
                 dirNum = (dirNum - 1 + 4) % 4;
             } else if (dir == 'R') {
                 dirNum = (dirNum + 1) % 4;
+            } else {
+                nx = dx[dirNum];
+                ny = dy[dirNum];
             }
-
-            nx = dx[dirNum];
-            ny = dy[dirNum];
         }
 
         System.out.print(nx + " " + ny);
