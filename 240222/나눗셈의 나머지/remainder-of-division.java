@@ -7,7 +7,7 @@ public class Main {
         int a = sc.nextInt(), b = sc.nextInt();
         int[] count = new int[10];
 
-        while (a > 0) {
+        while (a > 1) {
             count[a % b]++;
             a = a / b;
         }
@@ -18,3 +18,14 @@ public class Main {
         System.out.println(result);
     }
 }
+
+// 500 0 
+// 250 0 
+// 125 0 
+// 62 1 
+// 31 0 
+// 15 1
+// 7 1
+// 3 1
+// 1 1 
+// 0 1
