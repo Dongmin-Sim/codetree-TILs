@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int MAXT = 1000;
+    public static int MAXT = 1000*1000;
     public static int[] timeTableA = new int[MAXT+1];
     public static int[] timeTableB = new int[MAXT+1];
     public static Scanner sc = new Scanner(System.in);
