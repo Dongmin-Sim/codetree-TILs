@@ -19,7 +19,9 @@ public class Main {
         int idxB = 0;
 
         for (int i = 0; i < n1; i++) {
-
+            if (idxB == n2 - 1) {
+                break;
+            }
             if (arrA[i] == arrB[idxB]) {
                 idxB++;
             } else {
