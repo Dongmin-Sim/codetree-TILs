@@ -16,34 +16,24 @@ public class Main {
             arrB[i] = sc.nextInt();
         }
 
-        int idxA = 0, idxB = 0;
-
-        boolean flag = false;
-        while (true) {
-            // 남은 검사 수가 B보다도 작고, 맞지 않을때 , 더 이상 진행할 필요 없음.
-            if (n1 - idxA < n2 && arrA[idxA-1] != arrB[idxB]) {
+        int idxB = 0;
+        for (int i = 0; i < n1; i++) {
+            if (idxB > n2-1) {
                 break;
             }
-            // B가 부분수열일 경우 종료
 
-            if (arrA[idxA] == arrB[idxB]) {
-                if (idxB == n2 - 1) {
-                    flag = true;
-                    break;
-                }
-                idxA++;
-                idxB++;
-            } else {
-                idxA++;
+            if (arrA[i] != arrB[idxB]) {
                 idxB = 0;
+            } else {
+                idxB++;
             }
-
         }
 
-        if (flag) {
+        if (idxB > n2-1) {
             System.out.println("Yes");
         } else {
             System.out.println("No");
         }
+
     }
 }
