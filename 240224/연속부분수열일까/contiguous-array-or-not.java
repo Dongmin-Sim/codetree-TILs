@@ -21,7 +21,7 @@ public class Main {
         boolean flag = false;
         while (true) {
             // 남은 검사 수가 B보다도 작고, 맞지 않을때 , 더 이상 진행할 필요 없음.
-            if (n1 - idxA < n2 && arrA[idxA] != arrB[idxB]) {
+            if (n1 - idxA < n2 && arrA[idxA-1] != arrB[idxB]) {
                 break;
             }
             // B가 부분수열일 경우 종료
