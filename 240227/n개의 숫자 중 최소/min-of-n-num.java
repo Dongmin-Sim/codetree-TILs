@@ -15,7 +15,7 @@ public class Main {
 
         int minVal = INT_MAX;
         int minCnt = 0;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < n; i++) {
             if (arr[i] < minVal) {
                 minVal = arr[i];
                 minCnt = 1;
