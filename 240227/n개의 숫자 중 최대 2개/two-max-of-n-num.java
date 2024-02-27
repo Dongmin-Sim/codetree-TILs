@@ -15,21 +15,24 @@ public class Main {
         }
 
         int maxVal = INT_MAX;
+        int maxIdx = 0;
         for (int i = 0; i < n; i++) {
-            if (arr[i] > maxVal) {
+            if (maxVal < arr[i]) {
                 maxVal = arr[i];
-            } else {
-                arr2[i] = arr[i]; 
+                maxIdx = i;
+            }
+        }
+        System.out.print(maxVal + " ");
+        maxVal = INT_MAX;
+        for (int i = 0; i < n; i++) {
+            if (maxIdx == i) {
+                continue;
+            }
+            if (maxVal < arr[i]) {
+                maxVal = arr[i];
             }
         }
         System.out.print(maxVal + " ");
         
-        maxVal = INT_MAX;
-        for (int i = 0; i < n; i++) {
-            if (arr2[i] > maxVal) {
-                maxVal = arr2[i];
-            }
-        }
-        System.out.print(maxVal + " ");
     }
 }
