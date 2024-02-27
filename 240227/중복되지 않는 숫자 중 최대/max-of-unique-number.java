@@ -18,6 +18,7 @@ public class Main {
                 max = arr[i];
                 isDuplicate = false;
             } else if (max == arr[i]) {
+                max = Integer.MIN_VALUE;
                 isDuplicate = true;
             }
         }
