@@ -27,7 +27,7 @@ public class Main {
 
         matrix[x][y] = idx--;
 
-        while (idx > 1) {
+        while (idx >= 1) {
             int nx = x + dx[dirNum];
             int ny = y + dy[dirNum];
 
