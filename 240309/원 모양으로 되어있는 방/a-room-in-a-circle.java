@@ -29,7 +29,7 @@ public class Main {
             if (j == i) {
                 continue;
             }
-            total += arr[j % 5] * (multiply++);
+            total += arr[j % n] * (multiply++);
         }
 
         return total;
