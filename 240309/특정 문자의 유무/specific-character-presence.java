@@ -10,15 +10,15 @@ public class Main {
         String ab = "ab";
         
         if (a.contains(ee)) {
-            System.out.println("Yes");
+            System.out.print("Yes" + " ");
         } else {
-            System.out.println("No");
+            System.out.print("No" + " ");
         }
 
         if (a.contains(ab)) {
-            System.out.println("Yes");
+            System.out.print("Yes" + " ");
         } else {
-            System.out.println("No");
+            System.out.print("No" + " ");
         }
     }
 }
