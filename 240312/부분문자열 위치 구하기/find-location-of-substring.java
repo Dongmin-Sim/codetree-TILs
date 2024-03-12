@@ -5,40 +5,30 @@ public class Main {
         // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
 
-        String word = sc.next();
-        String subString = sc.next();
+        String inputStr = sc.next();
+        String targetStr = sc.next();
 
-        int resultIdx = -1;
-        int wordIdx = 0;
-        int subStringIdx = 0;
+        int inputLen = inputStr.length();
+        int targetLen = targetStr.length();
 
-        // apple
-        // pp
-        while (true) {
-            if (wordIdx == word.length() || subStringIdx == subString.length()) {
-                break;
+        for (int i = 0; i < inputLen; i++) {
+
+            if (i + targetLen - 1 >= inputLen) {
+                continue;
             }
 
-            if (word.charAt(wordIdx) == subString.charAt(subStringIdx)) {
-                if (subStringIdx == 0) {
-                    resultIdx = wordIdx;
+            boolean isMatched = true;
+            for (int j = 0; j < targetLen; j++) {
+                if (inputStr.charAt(i + j) != targetStr.charAt(j)) {
+                    isMatched = false;
+                    break;
                 }
-                subStringIdx++;
-            } else {
-                subStringIdx = 0;
-                if (word.charAt(wordIdx) == subString.charAt(0)) {
-                    continue;
-                }
-                resultIdx = -1;
             }
-
-            wordIdx++;
+            if (isMatched) {
+                System.out.println(i);
+                return;
+            }
         }
-
-        if (subStringIdx == subString.length()) {
-            System.out.println(resultIdx);
-        } else {
-            System.out.println(-1);
-        } 
+        System.out.println(-1);
     }
 }
