@@ -34,6 +34,11 @@ public class Main {
 
             wordIdx++;
         }
-        System.out.println(resultIdx);
+
+        if (subStringIdx == subString.length()) {
+            System.out.println(resultIdx);
+        } else {
+            System.out.println(-1);
+        } 
     }
 }
