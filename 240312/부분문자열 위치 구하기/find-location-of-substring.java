@@ -8,28 +8,32 @@ public class Main {
         String word = sc.next();
         String subString = sc.next();
 
-        int idx = -1;
+        int resultIdx = -1;
+        int wordIdx = 0;
         int subStringIdx = 0;
-        for (int i = 0; i < word.length(); i++) {
-            if (subStringIdx == subString.length()) {
+
+        // apple
+        // pp
+        while (true) {
+            if (wordIdx == word.length() || subStringIdx == subString.length()) {
                 break;
             }
 
-            if (word.charAt(i) == subString.charAt(subStringIdx)) {
+            if (word.charAt(wordIdx) == subString.charAt(subStringIdx)) {
                 if (subStringIdx == 0) {
-                    idx = i;    
+                    resultIdx = wordIdx;
                 }
                 subStringIdx++;
             } else {
-                idx = -1;
                 subStringIdx = 0;
+                if (word.charAt(wordIdx) == subString.charAt(0)) {
+                    continue;
+                }
+                resultIdx = -1;
             }
-        }
 
-        if (subStringIdx == subString.length()) {
-            System.out.println(idx);
-        } else {
-            System.out.println(-1);
+            wordIdx++;
         }
+        System.out.println(resultIdx);
     }
 }
