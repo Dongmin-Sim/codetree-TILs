@@ -11,7 +11,7 @@ public class Main {
         if (index != -1) {
             System.out.println(index);
         } else {
-            System.out.println(-1);
+            System.out.println("No");
         }
     }
 }
