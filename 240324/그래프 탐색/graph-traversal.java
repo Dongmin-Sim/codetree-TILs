@@ -29,6 +29,10 @@ public class Main {
         EDGES_NUM = sc.nextInt();
 
         graph = new ArrayList[VERTICES_NUM + 1];
+
+        for (int i = 0; i < VERTICES_NUM+1; i++) {
+            graph[i] = new ArrayList<>();
+        }
         visited = new boolean[VERTICES_NUM + 1];
 
         for (int i = 0; i < EDGES_NUM; i++) {
