@@ -11,7 +11,7 @@ public class Main {
     public static int cnt = 0;
 
     public static void DFS(int vertex) {
-        for (int i = 1; i < graph[vertex].size(); i++) {
+        for (int i = 0; i < graph[vertex].size(); i++) {
             int currV = graph[vertex].get(i);
             if (!visited[currV]) {
                 visited[currV] = true;
