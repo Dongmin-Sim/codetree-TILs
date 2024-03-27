@@ -71,7 +71,7 @@ public class Main {
             visited = new int[N][M];
         }
 
-        int minK = 0;
+        int minK = 1;
         int maxSafe = safe_zone[0];
         for (int i = 1; i < safe_zone.length; i++) {
             if (safe_zone[i] > maxSafe) {
