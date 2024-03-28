@@ -18,7 +18,7 @@ public class Main {
                 q.add(q.peek());
                 q.poll();
             }
-            System.out.println(q.poll());
+            System.out.print(q.poll() + " ");
         }
         System.out.println(q.poll());
     }
