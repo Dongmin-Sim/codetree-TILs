@@ -4,28 +4,29 @@ public class Main {
 
     public static int MAX_N = 1000;
     public static int MAX_X = 100;
-    public static int[] count = new int[MAX_X * MAX_N];
+    public static int[] whiteCount = new int[MAX_X * MAX_N];
+    public static int[] blackCount = new int[MAX_X * MAX_N];
     public static char[] tiles = new char[MAX_X * MAX_N];
     public static int currPos = (MAX_X * MAX_N) / 2;
 
     public static void paintLeft(int step) {
-        count[currPos]++;
+        whiteCount[currPos]++;
         tiles[currPos] = 'w';
 
         for (int i = 0; i < step-1; i++) {
             currPos--;
-            count[currPos]++;
+            whiteCount[currPos]++;
             tiles[currPos] = 'w';
         }
     }
 
     public static void paintRight(int step) {
-        count[currPos]++;
+        blackCount[currPos]++;
         tiles[currPos] = 'b';
 
         for (int i = 0; i < step-1; i++) {
             currPos++;
-            count[currPos]++;
+            blackCount[currPos]++;
             tiles[currPos] = 'b';
         }
     }
@@ -48,7 +49,7 @@ public class Main {
 
         int white = 0, black = 0, gray = 0;
         for (int i = 0; i < MAX_N * MAX_X; i++) {
-            if (count[i] >= 4) {
+            if (whiteCount[i] >= 2 && blackCount[i] >= 2){
                 gray++;
                 continue;
             }
