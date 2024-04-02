@@ -48,7 +48,7 @@ public class Main {
 
         int white = 0, black = 0, gray = 0;
         for (int i = 0; i < MAX_N * MAX_X; i++) {
-            if (count[i] >= 4) {
+            if (count[i] > 4) {
                 gray++;
                 continue;
             }
