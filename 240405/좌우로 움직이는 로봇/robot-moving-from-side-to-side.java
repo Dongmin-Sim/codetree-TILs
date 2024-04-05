@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int MAX = 50000*50000;
+    public static int MAX = 10000000;
 
     public static int[] moveA = new int[MAX];
     public static int[] moveB = new int[MAX];
