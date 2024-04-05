@@ -41,7 +41,7 @@ public class Main {
         }
 
         int count = 0;
-        int prevState = 0;
+        int prevState = 2;
         for (int i = 1; i < totalTime; i++) {
             int curState = -1;
             if (moveA[i] > moveB[i]) {
