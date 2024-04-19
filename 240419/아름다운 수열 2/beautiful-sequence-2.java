@@ -35,7 +35,7 @@ public class Main {
                     }
                 }
             }
-            if (Arrays.stream(exist).sum() == 3) {
+            if (Arrays.stream(exist).sum() == M) {
                 cnt++;
             }
         }
