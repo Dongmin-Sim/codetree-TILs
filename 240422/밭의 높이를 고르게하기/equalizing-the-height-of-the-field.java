@@ -16,7 +16,7 @@ public class Main {
 
         // 시작 지점
         int minCost = Integer.MAX_VALUE;
-        for (int i = 0; i < N-T; i++) {
+        for (int i = 0; i <= N-T; i++) {
             int cost = 0;
             for (int j = 0; j < T; j++) {
                 cost += Math.abs(grid[i + j] - H);
