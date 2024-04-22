@@ -1,49 +1,46 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int N;
+    public static final int MAX_NUM = 100;
+    public static int n;
+    public static int k;
+    public static int[] arr = new int[MAX_NUM + 1];
 
-    public static char[] alphas = new char[100+1];
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        N = sc.nextInt();
+        n = sc.nextInt();
 
-        if (N == 1) {
-            System.out.println(0);
-            return;
-        }
+        for (int i = 0; i < n; i++) {
+            int x = sc.nextInt();
+            char c = sc.next().charAt(0);
 
-        // int maxLength = 0;
-        for (int i = 0; i < N; i++) {
-            int idx = sc.nextInt();
-            char alpha = sc.next().charAt(0);
-            alphas[idx] = alpha;
-            // maxLength = Math.max(maxLength, idx);
+            if (c == 'G') {
+                arr[x] = 1;
+            } else {
+                arr[x] = 2;
+            }
         }
 
         int maxPhotoSize = 0;
-        // 시작 지점
-        for (int i = 0; i < 100; i++) {
-            if (alphas[i] != 'G' && alphas[i] != 'H') {
-                continue;
-            }
-            // 끝 지점
-            for (int j = i; j <= 100; j++) {
-                // 시작 i ~ 끝 j 까지 G나 H로 이루어져 있거나,
-                // G == H의 수가 정확히 같은 개수일 경우 maxPhotoSize 갱신
-                int gCnt = 0, hCnt = 0;
-                for (int k = i; k <= j; k++) {
-                    if (alphas[k] == 'G') {
-                        gCnt++;
-                    } else if (alphas[k] == 'H') {
-                        hCnt++;
-                    } else {
-                        continue;
+        for (int i = 0; i <= MAX_NUM; i++) {
+            for (int j = i + 1; j <= MAX_NUM; j++) {
+                if (arr[i] == 0 || arr[j] == 0) {
+                    continue;
+                }
+
+                int cntG = 0, cntH = 0;
+
+                for (int l = i; l <= j; l++) {
+                    if (arr[l] == 1) {
+                        cntG++;
+                    } else if (arr[l] == 2) {
+                        cntH++;
                     }
-                    // maxPhotoSize 갱신
-                    if ((gCnt > 0 && hCnt == 0) || (gCnt == 0 && hCnt > 0) || (gCnt == hCnt)) {
-                        maxPhotoSize = Math.max(maxPhotoSize, k - i);
-                    }
+                }
+
+                if (cntG == 0 || cntH == 0 || cntG == cntH) {
+                    int len = j - i;
+                    maxPhotoSize = Math.max(maxPhotoSize, len);
                 }
             }
         }
