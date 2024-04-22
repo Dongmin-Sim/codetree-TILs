@@ -13,25 +13,22 @@ public class Main {
             return;
         }
 
-        int maxLength = 0;
+        // int maxLength = 0;
         for (int i = 0; i < N; i++) {
             int idx = sc.nextInt();
             char alpha = sc.next().charAt(0);
             alphas[idx] = alpha;
-            maxLength = Math.max(maxLength, idx);
+            // maxLength = Math.max(maxLength, idx);
         }
 
         int maxPhotoSize = 0;
         // 시작 지점
-        for (int i = 0; i < 100 + 1 - maxLength; i++) {
+        for (int i = 0; i < 100; i++) {
             if (alphas[i] != 'G' && alphas[i] != 'H') {
                 continue;
             }
             // 끝 지점
-            for (int j = i; j <= maxLength; j++) {
-//                if (alphas[j] != 'G' && alphas[j] != 'H') {
-//                    continue;
-//                }
+            for (int j = i; j <= 100; j++) {
                 // 시작 i ~ 끝 j 까지 G나 H로 이루어져 있거나,
                 // G == H의 수가 정확히 같은 개수일 경우 maxPhotoSize 갱신
                 int gCnt = 0, hCnt = 0;
