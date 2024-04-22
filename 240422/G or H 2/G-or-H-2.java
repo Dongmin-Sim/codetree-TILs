@@ -28,7 +28,7 @@ public class Main {
                 continue;
             }
             // 끝 지점
-            for (int j = i; j < maxLength; j++) {
+            for (int j = i; j <= maxLength; j++) {
 //                if (alphas[j] != 'G' && alphas[j] != 'H') {
 //                    continue;
 //                }
