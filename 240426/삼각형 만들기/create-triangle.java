@@ -19,7 +19,7 @@ public class Main {
         // x 축에 평행 : (x1, y1), (x2, y2) 일때, y1-y2 == 0
         // y 축에 평행 : (x1, y1), (x2, y2) 일때, x1-x2 == 0
 
-        int maxArea = Integer.MIN_VALUE;
+        int maxArea = 0;
 
         for (int i = 0; i < n; i++) {
             for (int j = i+1; j < n; j++) {
