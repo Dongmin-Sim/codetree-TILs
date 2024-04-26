@@ -41,6 +41,6 @@ public class Main {
                 }
             }
         }
-        System.out.println(maxArea);
+        System.out.println(maxArea * 2);
     }
 }
