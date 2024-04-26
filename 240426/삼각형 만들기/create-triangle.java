@@ -34,13 +34,13 @@ public class Main {
                         // 셋다 같은 점이 아니라면
                         if (!((x2 == x3 && x3 == x1) && (y2 == y3 && y3 == y1))) {
                             // 넓이 구하기
-                            int area = Math.abs((x1 * y2 + x2 * y3 + x3 * y1) - (x2 * y1 + x3 * y2 + x1 * y3)) / 2;
+                            int area = Math.abs((x1 * y2 + x2 * y3 + x3 * y1) - (x2 * y1 + x3 * y2 + x1 * y3));
                             maxArea = Math.max(maxArea, area);
                         }
                     }
                 }
             }
         }
-        System.out.println(maxArea * 2);
+        System.out.println(maxArea);
     }
 }
