@@ -23,15 +23,22 @@ public class Main {
 
         int count = 0;
         for (int i = 0; i < n; i++) {
-            for (int j = i+1; j < n; j++) {
+            int temp = 0;
+            for (int j = 0; j < n; j++) {
+                if (i == j) continue;
+                
                 int x1 = x1Arr[i], x2 = x2Arr[i];
                 int x3 = x1Arr[j], x4 = x2Arr[j];
 
                 if ((x1 < x3 && x2 > x4) || (x1 > x3 && x2 < x4)) {
-                    count++;
+                    // 겹침
+                    temp++;
                 }
             }
+            if (temp == 0) {
+                count++;
+            }
         }
-        System.out.println(n - count*2);
+        System.out.println(count);
     }
 }
