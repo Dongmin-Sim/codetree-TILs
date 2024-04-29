@@ -40,23 +40,32 @@ public class Main {
             boolean isNotBadCheese = false;
             // 한명씩 돌아가면서 검사
             for (int person = 1; person <= N; person++) {
-                for (int i = 0; i < D; i++) {
-                    int[] history = dArray[i];
-                    int p = history[0], cheeseNum = history[1], eatTime = history[2];
-                    // 해당 사람이면서, 상한 치즈를 먹었고,
-                    if (p == person && cheeseNum == badCheese) {
-                        // 실제로 아프면서
-                        if (sMap.containsKey(person)) {
-                            int sickTime = sMap.get(person);
+
+                if (sMap.containsKey(person)) { // person이 아픈 사람 목록에 있는지
+                    int sickTime = sMap.get(person);
+
+                    for (int i = 0; i < D; i++) {
+                        int[] history = dArray[i];
+                        int p = history[0], cheeseNum = history[1], eatTime = history[2];
+                        if (p == person) {
                             // 아프기 전에 먹은 사람의 경우 약이 필요.
-                            if (eatTime < sickTime) {
-                                needMedicine++;
-                                break;
+                            if (cheeseNum == badCheese) {
+                                if (eatTime < sickTime) {
+                                    isNotBadCheese = false;
+                                    needMedicine++;
+                                    break;
+                                }
                             } else {
+                                // person이 아픈 사람 목록에는 있는데, 해당 치즈를 먹진 않음.
                                 isNotBadCheese = true;
                             }
-                        } else {
-                            // 먹었는데, 아픈 사람에는 목록이 없음.
+                        }
+                    }
+                } else { // person이 아픈 사람 목록에 없음
+                    for (int i = 0; i < D; i++) {
+                        int[] history = dArray[i];
+                        int p = history[0], cheeseNum = history[1], eatTime = history[2];
+                        if (p == person && cheeseNum == badCheese) {
                             needMedicine++;
                         }
                     }
