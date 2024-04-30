@@ -9,7 +9,9 @@ public class Main {
 
         race = new int[k][n];
         for (int i = 0; i < k; i++) {
-            race[i] = new int[]{sc.nextInt(), sc.nextInt(), sc.nextInt(), sc.nextInt()};
+            for (int j = 0; j < n; j++) {
+                race[i][j] = sc.nextInt();
+            }
         }
 
         int count = 0;
@@ -34,8 +36,9 @@ public class Main {
                             bRank = i;
                         }
                     }
-                    if (aRank < bRank) {
+                    if (aRank > bRank) {
                         alwaysWin = false;
+                        break;
                     }
                 }
 
