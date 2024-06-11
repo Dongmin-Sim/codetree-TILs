@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class Main {
@@ -10,6 +12,8 @@ public class Main {
 
     private static int[][] matrix;
     private static int[][] visited;
+
+    private static Queue<Pair> queue = new LinkedList<>();
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -25,11 +29,13 @@ public class Main {
 
         int maxGold = 0;
 
-        for (int k = 0; k < (N/2); k++) {
+        for (int k = 0; k < N; k++) {
             for (int i = 0; i < N; i++) {
                 for (int j = 0; j < N; j++) {
                     visited = new int[N][N];
-                    int currentGold = recursiveGold(i, j, k);
+                    queue.add(new Pair(i, j, k));
+
+                    int currentGold = bfsGold();
                     if (isBenefit(currentGold, k)) {
                         maxGold = Math.max(maxGold, currentGold);
                     }
@@ -44,27 +50,72 @@ public class Main {
         return (currentGold * M) >= cost;
     }
 
-    private static int recursiveGold(int curX, int curY, int k) {
-        if (k < 0) {
-            return 0;
-        }
+    private static int bfsGold() {
         int gold = 0;
-        if (visited[curX][curY] != 1 && matrix[curX][curY] == 1){
-            gold++;
-            visited[curX][curY] = 1;
+
+        while (!queue.isEmpty()) {
+            Pair curP = queue.poll();
+            int x = curP.getX();
+            int y = curP.getY();
+            int k = curP.getK();
+
+            if (k < 0) continue;
+            if (visited[x][y] == 0 && matrix[x][y] == 1){
+                gold++;
+            }
+            visited[x][y] = 1;
+
+
+
+            for (int i = 0; i < 4; i++) {
+                int nx = curP.getX() + dx[i];
+                int ny = curP.getY() + dy[i];
+                if (!isOutRange(nx, ny) && visited[nx][ny] == 0){
+                    queue.add(new Pair(nx, ny, curP.getK() - 1));
+                }
+            }
         }
 
-        for (int i = 0; i < 4; i++) {
-            int ny = curY + dy[i];
-            int nx = curX + dx[i];
-            if (isOutRange(nx, ny)) continue;
-
-            gold += recursiveGold(nx, ny, k - 1);
-        }
         return gold;
     }
-
     private static boolean isOutRange(int x, int y) {
         return x < 0 || x >= N || y < 0 || y >= N;
+    }
+
+    public static class Pair {
+
+        int x;
+        int y;
+        int k;
+        public Pair(int x, int y, int k) {
+            this.x = x;
+            this.y = y;
+            this.k = k;
+        }
+
+        public int getX() {
+            return x;
+        }
+
+        public void setX(int x) {
+            this.x = x;
+        }
+
+        public int getY() {
+            return y;
+        }
+
+        public void setY(int y) {
+            this.y = y;
+        }
+
+        public int getK() {
+            return k;
+        }
+
+        public void setK(int k) {
+            this.k = k;
+        }
+
     }
 }
