@@ -28,7 +28,7 @@ public class Main {
         N = sc.nextInt();
         M = sc.nextInt();
 
-        matrix = new int[N][M];
+        matrix = new int[N][N];
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 matrix[i][j] = sc.nextInt();
