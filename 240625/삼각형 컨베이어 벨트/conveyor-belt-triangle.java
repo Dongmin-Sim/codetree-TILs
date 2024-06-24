@@ -36,9 +36,11 @@ public class Main {
         for (int i = 0; i < n; i++) {
             System.out.print(left[i] + " ");
         }
+        System.out.println();
         for (int i = 0; i < n; i++) {
             System.out.print(right[i] + " ");
         }
+        System.out.println();
         for (int i = 0; i < n; i++) {
             System.out.print(down[i] + " ");
         }
