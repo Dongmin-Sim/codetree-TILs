@@ -11,9 +11,9 @@ public class Main {
         // left -> right -> down -> left
         int n = sc.nextInt(), t = sc.nextInt();
 
-        IntStream.range(0, 3).forEach(i -> left[i] = sc.nextInt());
-        IntStream.range(0, 3).forEach(i -> right[i] = sc.nextInt());
-        IntStream.range(0, 3).forEach(i -> down[i] = sc.nextInt());
+        IntStream.range(0, n).forEach(i -> left[i] = sc.nextInt());
+        IntStream.range(0, n).forEach(i -> right[i] = sc.nextInt());
+        IntStream.range(0, n).forEach(i -> down[i] = sc.nextInt());
 
 
         for (int i = 0; i < t; i++) {
