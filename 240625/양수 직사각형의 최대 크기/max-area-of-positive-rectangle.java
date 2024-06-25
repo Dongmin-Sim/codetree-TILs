@@ -45,7 +45,7 @@ public class Main {
     public static boolean isPositiveRectangle(Point start, Point end) {
         for (int i = start.x; i <= end.x; i++) {
             for (int j = start.y; j <= end.y; j++) {
-                if (matrix[i][j] < 0) {
+                if (matrix[i][j] <= 0) {
                     return false;
                 }
             }
