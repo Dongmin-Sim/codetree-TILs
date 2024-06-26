@@ -34,6 +34,10 @@ public class Main {
         // row를 기준으로 위, 아래 행과 비교하여 동일한 원소가 하나라도 존재하는지 확인 >> 재귀 ?(원소들이 하나도 탈출조건은 같지 않을때)
         // 존재한다면, 반대 Direction 으로 (1) 반복
         // 동일한 원소가 없을때까지 반복
+        if (n == 1) {
+            printMatrix();
+            return;
+        }
 
         for (int i = 0; i < q; i++) {
             blowWind(row[i], direction[i]);
