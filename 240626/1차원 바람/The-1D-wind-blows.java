@@ -46,29 +46,33 @@ public class Main {
         printMatrix();
     }
 
-    private static void blowWind(int curRow, char c) {
-        moveElements(curRow, c);
+    private static void blowWind(int row, char c) {
+        moveElements(row, c);
+
+        int curRow;
+        char nextDir;
         // up propagation
-        int upRow = curRow;
-        char upDir = c;
-        for (int i = curRow-1; i >= 0; i--) {
-            if (isSame(upRow, i)) {
-                upDir = getOtherDir(upDir);
-                moveElements(i, upDir);
-                upRow--;
+
+        curRow = row;
+        nextDir = c;
+        for (int nextRow = row-1; nextRow >= 0; nextRow--) {
+            if (isSame(curRow, nextRow)) {
+                nextDir = getOtherDir(nextDir);
+                moveElements(nextRow, nextDir);
+                curRow--;
             } else {
                 break;
             }
         }
 
         // down propagation
-        int nowRow = curRow;
-        char downDir = c;
-        for (int downRow = curRow+1; downRow <= m; downRow++) {
-            if (isSame(nowRow, downRow)) {
-                downDir = getOtherDir(downDir);
-                moveElements(downRow, downDir);
-                nowRow++;
+        curRow = row;
+        nextDir = c;
+        for (int nextRow = row+1; nextRow <= n; nextRow++) {
+            if (isSame(curRow, nextRow)) {
+                nextDir = getOtherDir(nextDir);
+                moveElements(nextRow, nextDir);
+                curRow++;
             } else {
                 break;
             }
