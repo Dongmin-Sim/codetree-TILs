@@ -68,7 +68,7 @@ public class Main {
         // down propagation
         curRow = row;
         nextDir = c;
-        for (int nextRow = row+1; nextRow <= n; nextRow++) {
+        for (int nextRow = row+1; nextRow < n; nextRow++) {
             if (isSame(curRow, nextRow)) {
                 nextDir = getOtherDir(nextDir);
                 moveElements(nextRow, nextDir);
@@ -121,10 +121,3 @@ public class Main {
         }
     }
 }
-
-//1 5 6 7 3
-//5 3 2 5 4
-//5 6 4 5 2
-//6 1 0 5 2
-//6 5 1 2 1
-//2 5 2 8 4
