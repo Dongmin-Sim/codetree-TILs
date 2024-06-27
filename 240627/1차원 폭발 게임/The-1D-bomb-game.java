@@ -58,7 +58,7 @@ public class Main {
             }
         }
         if ((sameCount + 1) >= blowUpCondition) {
-            for (int j = candidateStart; j <= bombListSize; j++) {
+            for (int j = candidateStart; j < bombListSize; j++) {
                 bombList[j] = 0;
             }
         }
