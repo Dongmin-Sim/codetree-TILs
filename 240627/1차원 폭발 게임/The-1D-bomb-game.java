@@ -8,6 +8,10 @@ public class Main {
     public static int[] bombList;
     public static void main(String[] args) {
         setup();
+        if (blowUpCondition == 1) {
+            System.out.println(0);
+            return;
+        }
         // 엔드 조건 판단, list에 터질만한 폭탄이 있는가?
         while (goBomb()) {
             // 있으면 터트리기
