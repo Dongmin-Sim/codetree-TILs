@@ -21,7 +21,7 @@ public class Main {
             return;
         }
 
-        for (int i = 1; i < 4; i++) {
+        for (int i = 1; i <= 4; i++) {
             list.add(i);
             countBeautifulNumber(cnt + 1);
             list.remove(list.size() - 1);
