@@ -14,12 +14,8 @@ public class Main {
         }
 
         for (int i = 0; i < m; i++) {
-            Integer number = map.get(sc.nextInt());
-            if (number != null) {
-                System.out.print(number + " ");
-            } else {
-                System.out.println(0 + " ");
-            }
+            int num = sc.nextInt();
+            System.out.print(map.getOrDefault(num, 0) + " ");
         }
     }
 }
