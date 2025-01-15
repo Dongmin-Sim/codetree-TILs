@@ -10,17 +10,16 @@ public class Main {
         int k = sc.nextInt();
 
         int[] array = new int[n];
-
         for (int i = 0; i < n; i++) {
             array[i] = sc.nextInt();
         }
 
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = i+1; j < n; j++) {
-                if (array[i] + array[j] == k) {
-                    answer++;
-                }
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int num : array) {
+            if (map.containsKey(k - num)) {
+                answer += map.get(k - num);
             }
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
 
         System.out.println(answer);
