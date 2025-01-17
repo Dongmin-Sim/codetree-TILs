@@ -22,7 +22,7 @@ public class Main {
             for(int j=0; j<i; j++) {
                 int temp = k - (array[i] + array[j]);
                 if (map.containsKey(temp) && map.get(temp) > 0) {
-                    answer++;
+                    answer+=map.get(temp);
                 }
             }
         }
