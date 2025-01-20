@@ -14,9 +14,7 @@ public class Main {
         for(int i=0; i<m; i++){
             int cur = sc.nextInt();
 
-
-            
-            int l = 0, r = array.length;
+            int l = 0, r = array.length-1;
             int answerIdx = -1;
             while(l<= r) {
                 int mid = l + (r-l)/2;
