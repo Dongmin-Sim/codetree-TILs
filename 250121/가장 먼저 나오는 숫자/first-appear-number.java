@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int[] array = new int[];
+    public static int[] array;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -15,23 +15,23 @@ public class Main {
 
         for(int i = 0; i < m; i++) {
             int num = sc.nextInt();
-            findFirstIndex(num);
+            System.out.println(findFirstIndex(num));
         }
     }
 
-    public static void findFirstIndex(int num) {
+    public static int findFirstIndex(int num) {
         int l = 0, r = array.length;
 
         while(l < r) {
             int m = l + (r - l) / 2;
-            if (array[m] >= target) {
+            if (array[m] >= num) {
                 r = m;
             } else {
                 l = m + 1;
             }
         }
 
-        if (array[l] == num) return l;
+        if (array[l] == num) return l+1;
         return -1;
     }
 }
