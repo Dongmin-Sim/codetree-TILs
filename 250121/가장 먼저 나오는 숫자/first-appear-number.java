@@ -20,7 +20,7 @@ public class Main {
     }
 
     public static int findFirstIndex(int num) {
-        int l = 0, r = array.length;
+        int l = 0, r = array.length - 1;
 
         while(l < r) {
             int m = l + (r - l) / 2;
