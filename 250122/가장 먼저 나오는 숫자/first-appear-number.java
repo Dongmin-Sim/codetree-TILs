@@ -30,7 +30,7 @@ public class Main {
             }
         }
 
-        if (ㅣ < array.length && array[l] == num) {
+        if (l < array.length && array[l] == num) {
             System.out.println(l+1);
             return;
         }
